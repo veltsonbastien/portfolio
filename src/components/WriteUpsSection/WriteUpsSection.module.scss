@@ -1,6 +1,7 @@
 @use "../../app/_variables" as vars;
 
-.experience-section-wrapper {
+.writeups-section-wrapper {
+  margin-top: 32px;
   padding: 16px;
   display: flex;
   flex-direction: column;
@@ -14,5 +15,13 @@
 
   .subtitle {
     color: vars.$secondary-text-color;
+  }
+
+  .writeups {
+    margin-top: 32px;
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }

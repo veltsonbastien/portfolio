@@ -4,9 +4,11 @@ import {
   JOB_TITLE,
   EXPERIENCE_SECTION_TITLE,
   EXPERIENCE_SECTION_SUBTITLE,
+  WRITEUPS_SECTION_TITLE,
+  WRITEUPS_SECTION_SUBTITLE,
 } from "@/constants";
 import { LOGO_IMAGE_LOCAL } from "@/components/Navbar/constants";
-import { Navbar, Hero, ExperienceSection } from "@/components";
+import { Navbar, Hero, ExperienceSection, WriteUpsSection } from "@/components";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -17,6 +19,10 @@ export default function Home() {
       <ExperienceSection
         title={EXPERIENCE_SECTION_TITLE}
         subtitle={EXPERIENCE_SECTION_SUBTITLE}
+      />
+      <WriteUpsSection
+        title={WRITEUPS_SECTION_TITLE}
+        subtitle={WRITEUPS_SECTION_SUBTITLE}
       />
     </main>
   );

@@ -56,3 +56,8 @@ export const EXPERIENCES: Experience[] = [
     endDate: "September 2019",
   },
 ];
+
+//WRITEUPS SECTION:
+export const WRITEUPS_SECTION_TITLE = "More than buzzwords";
+export const WRITEUPS_SECTION_SUBTITLE =
+  "Click to explore some key projects that I've built with different technologies.";
