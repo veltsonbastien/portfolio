@@ -1,0 +1,27 @@
+@use "../../../../app/_variables" as vars;
+
+.experience-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+
+  h3 {
+    font-size: 16px;
+  }
+
+  h3,
+  p {
+    margin: 0;
+  }
+
+  .experience-info {
+    .role {
+      font-size: 16px;
+    }
+
+    .date {
+      color: vars.$secondary-text-color;
+      font-size: 12px;
+    }
+  }
+}
