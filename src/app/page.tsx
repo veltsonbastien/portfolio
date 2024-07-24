@@ -16,14 +16,19 @@ export default function Home() {
     <main className={styles.main}>
       <Navbar image={LOGO_IMAGE_LOCAL} links={NAVBAR_LINKS} />
       <Hero title={HERO_H1_TEXT} subtitle={JOB_TITLE} />
-      <ExperienceSection
-        title={EXPERIENCE_SECTION_TITLE}
-        subtitle={EXPERIENCE_SECTION_SUBTITLE}
-      />
-      <WriteUpsSection
-        title={WRITEUPS_SECTION_TITLE}
-        subtitle={WRITEUPS_SECTION_SUBTITLE}
-      />
+      <div className={styles["body"]}>
+        <ExperienceSection
+          title={EXPERIENCE_SECTION_TITLE}
+          subtitle={EXPERIENCE_SECTION_SUBTITLE}
+        />
+        <WriteUpsSection
+          title={WRITEUPS_SECTION_TITLE}
+          subtitle={WRITEUPS_SECTION_SUBTITLE}
+        />
+      </div>
+      <div className={styles["footer"]}>
+        Veltson Bastien © {new Date().getFullYear()}
+      </div>
     </main>
   );
 }
