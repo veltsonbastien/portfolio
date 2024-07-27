@@ -8,9 +8,10 @@ interface FilterButtonProps {
 }
 
 export const FilterButton = ({ text }: FilterButtonProps) => {
-  const { addFilter, removeFilter } = useWriteUpSectionContext();
+  const { filters, addFilter, removeFilter } = useWriteUpSectionContext();
   const [selected, setSelected] = useState(false);
   const textColor = useMemo(() => generateColorFromText(text), [text]);
+  const isActive = useMemo(() => filters.includes(text), [filters, text]);
 
   const handleClick = () => {
     if (!selected) addFilter(text);
@@ -22,7 +23,7 @@ export const FilterButton = ({ text }: FilterButtonProps) => {
   return (
     <div
       style={{ color: textColor }}
-      className={`${styles["filter-button-wrapper"]} ${selected ? styles["active"] : ""}`}
+      className={`${styles["filter-button-wrapper"]} ${isActive ? styles["active"] : ""}`}
       onClick={() => handleClick()}
     >
       {text}

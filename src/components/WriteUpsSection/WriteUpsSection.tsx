@@ -4,7 +4,7 @@ import { WRITEUPS } from "@/components/WriteUpsSection/constants";
 import { WriteUpSectionProvider, useWriteUpSectionContext } from "./providers";
 import { Filter } from "@/components/core/Filter";
 import { WriteUp } from "@/components/WriteUpsSection/components";
-import { WriteUpTag } from "@/types/structures.types";
+import { WriteUpTag, WriteUpType } from "@/types/structures.types";
 import styles from "./WriteUpsSection.module.scss";
 
 interface WriteUpsSectionProps {
@@ -14,13 +14,22 @@ interface WriteUpsSectionProps {
 
 const writeUpSectionFilters = Object.values(WriteUpTag);
 
+const filterWriteUps = (filters: string[]) => {
+  const filteredWriteUps: WriteUpType[] = [];
+
+  WRITEUPS.forEach((writeUp) => {
+    writeUp.tags.forEach((tag) => {
+      if (filters.includes(tag)) filteredWriteUps.push(writeUp);
+    });
+  });
+
+  return filteredWriteUps;
+};
+
 export const WriteUpsSectionContent = () => {
   const { filters } = useWriteUpSectionContext();
 
-  //todo: fix this
-  const writeUpsToDisplay = WRITEUPS.filter((writeup) =>
-    writeup.tags.includes(filters[0] as WriteUpTag),
-  );
+  const writeUpsToDisplay = filters.length ? filterWriteUps(filters) : WRITEUPS;
 
   return (
     <div className={styles["writeups"]}>
@@ -37,7 +46,10 @@ export const WriteUpsSection = ({ title, subtitle }: WriteUpsSectionProps) => {
       <div className={styles["writeups-section-wrapper"]}>
         <h3 className={styles["title"]}>{title}</h3>
         <p className={styles["subtitle"]}>{subtitle}</p>
-        <Filter options={writeUpSectionFilters} />
+        <Filter
+          title={"Which write ups would you like to see?"}
+          options={writeUpSectionFilters}
+        />
         <WriteUpsSectionContent />
       </div>
     </WriteUpSectionProvider>
