@@ -1,0 +1,1 @@
+export { generateColorFromText } from "./generateColorFromText";

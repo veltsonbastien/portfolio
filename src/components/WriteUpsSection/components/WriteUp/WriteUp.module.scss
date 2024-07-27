@@ -12,8 +12,6 @@
     margin: 0;
   }
 
-  .title {
-  }
   .description {
     text-align: center;
   }
@@ -30,5 +28,10 @@
     &:hover {
       background-color: lighten(vars.$rjpink, 10%);
     }
+  }
+
+  .tags {
+    display: flex;
+    gap: 4px;
   }
 }
