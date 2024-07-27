@@ -26,7 +26,6 @@ export const WriteUpSectionProvider = ({
   children,
 }: WriteUpSectionProviderProps) => {
   const [filters, setFilters] = useState<string[]>([]);
-  console.log("filters: ", filters);
 
   const addFilter = useCallback(
     (filter: string) => {
