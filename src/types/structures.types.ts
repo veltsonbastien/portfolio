@@ -25,4 +25,5 @@ export interface WriteUpType {
   cta: string;
   link: string;
   tags: WriteUpTag[];
+  documentId?: string;
 }

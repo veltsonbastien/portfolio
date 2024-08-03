@@ -13,7 +13,7 @@ export const NAVBAR_LINKS: SiteLink[] = [
   },
   {
     name: "Resume",
-    url: "/https://docs.google.com/document/d/14-F_G1x25tvyZGz600y6QETQEM_i1CdqpxUBzWAWyfc/edit?usp=sharing",
+    url: "https://docs.google.com/document/d/14-F_G1x25tvyZGz600y6QETQEM_i1CdqpxUBzWAWyfc/edit?usp=sharing",
   },
 ];
 
@@ -61,3 +61,5 @@ export const EXPERIENCES: Experience[] = [
 export const WRITEUPS_SECTION_TITLE = "More than buzzwords";
 export const WRITEUPS_SECTION_SUBTITLE =
   "Click to explore some key projects that I've built with different technologies.";
+
+export const RJPINK = "#ed5d66";

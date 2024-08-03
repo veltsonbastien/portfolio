@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useMemo } from "react";
 import { useWriteUpSectionContext } from "@/components/WriteUpsSection/providers";
 import { generateColorFromText } from "@/utils";

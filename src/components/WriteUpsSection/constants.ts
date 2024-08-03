@@ -8,6 +8,7 @@ export const WRITEUPS: WriteUpType[] = [
     cta: "Read more",
     link: "https://magnificent-pewter-94e.notion.site/Tech-Interview-Series-Just-use-fetch-c13dad519f844e32ad69b04872d698cd?pvs=4",
     tags: [WriteUpTag.BACKEND],
+    documentId: "TechInterview1",
   },
   {
     title: "Rewriting REST with GraphQL",
@@ -16,6 +17,7 @@ export const WRITEUPS: WriteUpType[] = [
     cta: "Read more",
     link: "https://magnificent-pewter-94e.notion.site/Exploring-the-Benefits-of-GraphQL-c6eb4782b4484701b4267bd17bf58772",
     tags: [WriteUpTag.FULLSTACK],
+    documentId: "GraphQLBenefits",
   },
   {
     title: "Google Cloud Platform & Firebase",
@@ -29,6 +31,7 @@ export const WRITEUPS: WriteUpType[] = [
       WriteUpTag.REACT,
       WriteUpTag.TYPESCRIPT,
     ],
+    documentId: "GhostGoggles",
   },
   {
     title: "React, R3F & TypeScript",
@@ -58,6 +61,7 @@ export const WRITEUPS: WriteUpType[] = [
     cta: "Read more",
     link: "https://magnificent-pewter-94e.notion.site/Implementing-WebSockets-to-see-the-live-count-of-visitors-to-a-site-6c5546defaf74b28bb1ab3e3172ed43a?pvs=4",
     tags: [WriteUpTag.BACKEND, WriteUpTag.FULLSTACK],
+    documentId: "ImplementingWebsockets",
   },
   {
     title: "Networking and C",
@@ -82,6 +86,7 @@ export const WRITEUPS: WriteUpType[] = [
     cta: "Read more",
     link: "https://magnificent-pewter-94e.notion.site/Implementing-LCS-to-find-the-difference-between-two-worlds-82f3993379e54a82bd6bde0078e9882c",
     tags: [WriteUpTag.BACKEND],
+    documentId: "ImplementLCS",
   },
   {
     title: "Object Oriented Design (C++)",

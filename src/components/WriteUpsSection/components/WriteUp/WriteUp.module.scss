@@ -15,20 +15,6 @@
   .description {
     text-align: center;
   }
-  .button {
-    text-decoration: none;
-    padding: 8px 16px;
-    border-radius: 8px;
-    background-color: vars.$rjpink;
-    color: white;
-    font-size: 14px;
-    font-weight: 500;
-    transition: 0.2s;
-
-    &:hover {
-      background-color: lighten(vars.$rjpink, 10%);
-    }
-  }
 
   .tags {
     display: flex;
