@@ -21,7 +21,7 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <PageProvider>
-      <Modal id={"hi"} />
+      <Modal />
       <main className={styles.main}>
         <Navbar image={LOGO_IMAGE_LOCAL} links={NAVBAR_LINKS} />
         <Hero title={HERO_H1_TEXT} subtitle={JOB_TITLE} />
