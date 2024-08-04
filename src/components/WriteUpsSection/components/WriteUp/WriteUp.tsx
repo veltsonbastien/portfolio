@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { usePageContext } from "@/contexts";
+import { usePageContext } from "@/providers";
 import { WriteUpTag } from "@/types/structures.types";
 import { Button, Tag } from "@/components";
 import styles from "./WriteUp.module.scss";

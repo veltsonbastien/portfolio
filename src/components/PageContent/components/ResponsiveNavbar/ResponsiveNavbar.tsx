@@ -2,7 +2,7 @@
 
 import { LOGO_IMAGE_LOCAL } from "@/components/Navbar/constants";
 import { NAVBAR_LINKS } from "@/constants";
-import { usePageContext } from "@/contexts";
+import { usePageContext } from "@/providers";
 import { Navbar, MobileNavbar } from "@/components";
 
 export const ResponsiveNavbar = () => {

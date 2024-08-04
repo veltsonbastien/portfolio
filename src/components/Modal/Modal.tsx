@@ -2,7 +2,7 @@
 
 import Markdown from "react-markdown";
 import { Spinner } from "@nextui-org/spinner";
-import { usePageContext } from "@/contexts";
+import { usePageContext } from "@/providers";
 import { useGetS3Document } from "@/hooks";
 import styles from "./Modal.module.scss";
 
