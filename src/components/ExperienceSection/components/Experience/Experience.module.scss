@@ -5,8 +5,16 @@
   flex-direction: column;
   max-width: 200px;
 
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
+
   h3 {
     font-size: 16px;
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
   }
 
   h3,
@@ -17,11 +25,19 @@
   .experience-info {
     .role {
       font-size: 16px;
+
+      @media (max-width: 768px) {
+        font-size: 24px;
+      }
     }
 
     .date {
       color: vars.$secondary-text-color;
       font-size: 12px;
+
+      @media (max-width: 768px) {
+        font-size: 20px;
+      }
     }
   }
 }

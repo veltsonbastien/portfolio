@@ -27,3 +27,8 @@ export interface WriteUpType {
   tags: WriteUpTag[];
   documentId?: string;
 }
+
+export interface NavbarProps {
+  image: string;
+  links: SiteLink[];
+}

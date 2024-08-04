@@ -10,6 +10,13 @@
   h1 {
     color: vars.$vorange;
     font-size: 48px;
+
+    @media (max-width: 768px) {
+      text-align: center;
+      font-size: 56px;
+      padding: 16px;
+      margin-top: 16%;
+    }
   }
 
   .hero-name-section {
@@ -24,9 +31,17 @@
 
     .name {
       font-size: 24px;
+
+      @media (max-width: 768px) {
+        font-size: 36px;
+      }
     }
     .subtitle {
       color: vars.$secondary-text-color;
+
+      @media (max-width: 768px) {
+        font-size: 24px;
+      }
     }
   }
 }

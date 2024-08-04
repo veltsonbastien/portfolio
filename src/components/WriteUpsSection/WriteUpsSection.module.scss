@@ -6,15 +6,29 @@
   display: flex;
   flex-direction: column;
 
+  @media (max-width: 768px) {
+    margin-top: 16%;
+    text-align: center;
+  }
+
   .title {
     font-size: 32px;
     font-weight: 400;
     margin: 0;
     color: vars.$rjpink;
+
+    @media (max-width: 768px) {
+      font-size: 40px;
+    }
   }
 
   .subtitle {
     color: vars.$secondary-text-color;
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+      line-height: 32px;
+    }
   }
 
   .writeups {
@@ -22,5 +36,10 @@
     display: flex;
     gap: 56px;
     flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+      margin-top: 16%;
+      flex-direction: column;
+    }
   }
 }
