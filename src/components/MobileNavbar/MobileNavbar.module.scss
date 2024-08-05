@@ -29,11 +29,13 @@
     margin-top: 16px;
 
     li {
-      padding: 8px 16px;
-      border: 1px solid #aaa;
-      text-align: center;
+      display: flex;
 
       a {
+        padding: 8px 16px;
+        border: 1px solid #aaa;
+        text-align: center;
+
         text-decoration: none;
         text-transform: uppercase;
         color: vars.$secondary-text-color;
@@ -42,6 +44,8 @@
         letter-spacing: 1px;
         font-size: 16px;
         line-height: 32px;
+
+        width: 100%;
 
         &:hover {
           color: darken(vars.$secondary-text-color, 20%);
