@@ -13,7 +13,7 @@ export const NAVBAR_LINKS: SiteLink[] = [
   },
   {
     name: "Resume",
-    url: "https://docs.google.com/document/d/14-F_G1x25tvyZGz600y6QETQEM_i1CdqpxUBzWAWyfc/edit?usp=sharing",
+    url: "https://docs.google.com/document/d/1YS9S4Hny8FIh40FUsSewDHah6VI_7XtVmbCyKE9hWkQ/edit?usp=sharing",
   },
 ];
 
