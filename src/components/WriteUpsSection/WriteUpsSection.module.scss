@@ -36,6 +36,13 @@
     display: flex;
     gap: 56px;
     flex-wrap: wrap;
+    min-height: 30vh;
+
+    &::after {
+      content: "";
+      flex-basis: 30%;
+      flex-grow: 1;
+    }
 
     @media (max-width: 768px) {
       margin-top: 16%;

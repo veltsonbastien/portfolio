@@ -94,6 +94,6 @@ export const WRITEUPS: WriteUpType[] = [
       "Successfully completed CS16, CS24 and CS32 at UCSB and implemented OOP concepts developing with Typescript at Muse.",
     cta: 'Explore "Heatmap"',
     link: "https://github.com/veltsonbastien/Heatmap",
-    tags: [WriteUpTag.OOP, WriteUpTag.TYPESCRIPT],
+    tags: [WriteUpTag.OOP, WriteUpTag.TYPESCRIPT, WriteUpTag.REACT],
   },
 ];

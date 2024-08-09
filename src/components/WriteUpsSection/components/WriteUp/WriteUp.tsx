@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { usePageContext } from "@/providers";
 import { WriteUpTag } from "@/types/structures.types";
 import { Button, Tag } from "@/components";
+import { Star } from "./components";
 import styles from "./WriteUp.module.scss";
 
 interface WriteUpProps {
@@ -30,7 +31,12 @@ export const WriteUp = ({
 
   return (
     <div className={styles["writeup-wrapper"]}>
-      <h4 className={styles["title"]}>{title}</h4>
+      <div className={styles["title-wrapper"]}>
+        <span className={styles["star"]}>
+          <Star writeUpTitle={title} />
+        </span>
+        <h4 className={styles["title"]}>{title}</h4>
+      </div>
       <p className={styles["description"]}>{description}</p>
       <Button
         onClick={
