@@ -63,3 +63,8 @@ export const WRITEUPS_SECTION_SUBTITLE =
   "Click to explore some key projects that I've built with different technologies.";
 
 export const RJPINK = "#ed5d66";
+
+export enum USER_EVENTS {
+  STARRED_WRITEUP = "Starred WriteUp",
+  UNSTARRED_WRITEUP = "Unstarred WriteUp",
+}

@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { RJPINK } from "@/constants";
+import { useEffect, useState } from "react";
+import { RJPINK, USER_EVENTS } from "@/constants";
 import { usePageContext } from "@/providers";
 import { useFavoriteStatus } from "./hooks";
+import { trackEvent } from "@/utils";
 
 interface StarProps {
   writeUpTitle: string;
@@ -23,6 +24,12 @@ export const Star = ({ writeUpTitle }: StarProps) => {
   const handleClick = () => {
     updateFavoriteState(writeUpTitle);
     setSelected(!selected);
+    trackEvent(
+      selected ? USER_EVENTS.STARRED_WRITEUP : USER_EVENTS.UNSTARRED_WRITEUP,
+      {
+        writeupTitle: writeUpTitle,
+      },
+    );
   };
 
   useEffect(() => {
