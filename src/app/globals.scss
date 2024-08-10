@@ -4,6 +4,6 @@ body {
   overflow-x: hidden;
 }
 
-*:not(h3, p) {
+*:not(h1, h2, h3, p) {
   margin: 0;
 }
