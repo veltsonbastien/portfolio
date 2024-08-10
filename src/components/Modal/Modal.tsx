@@ -17,7 +17,7 @@ export const Modal = () => {
   };
 
   return showModal ? (
-    <div className={styles["modal-wrapper"]}>
+    <div className={styles["modal-wrapper"]} onClick={handleClose}>
       <div className={styles["modal"]}>
         <div className={styles["exit"]} onClick={handleClose}>
           &times;

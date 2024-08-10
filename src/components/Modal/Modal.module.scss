@@ -9,6 +9,7 @@
   top: 0;
   left: 0;
   z-index: 4;
+  pointer-events: none;
 
   .modal {
     background: #fff;
@@ -19,6 +20,7 @@
     overflow-x: hidden;
     position: relative;
     padding: 56px;
+    pointer-events: auto;
 
     @media (max-width: 768px) {
       height: 80vh;
