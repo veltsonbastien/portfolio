@@ -2,25 +2,27 @@
 
 import { useState, useEffect } from "react";
 
-export const useFavoriteStatus = (writeUpTitle: string) => {
-  const [isFavorited, setIsFavorited] = useState(false);
+export const useFavoriteStatus = () => {
+  const [favoriteStatusLocalStorage, setFavoriteStatusLocalStorage] =
+    useState<string[]>();
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       const favoriteWriteUps = JSON.parse(
         localStorage.getItem("favoriteWriteUps") || "[]",
       );
-      setIsFavorited(favoriteWriteUps.includes(writeUpTitle));
-    }
-  }, [writeUpTitle]);
 
-  const updateFavoriteState = () => {
+      setFavoriteStatusLocalStorage(favoriteWriteUps);
+    }
+  }, []);
+
+  const updateFavoriteState = (writeUpTitle: string) => {
     if (typeof window !== "undefined") {
       const favoriteWriteUps = JSON.parse(
         localStorage.getItem("favoriteWriteUps") || "[]",
       );
 
-      if (isFavorited) {
+      if (favoriteStatusLocalStorage?.includes(writeUpTitle)) {
         localStorage.setItem(
           "favoriteWriteUps",
           JSON.stringify(
@@ -33,9 +35,8 @@ export const useFavoriteStatus = (writeUpTitle: string) => {
           JSON.stringify([...favoriteWriteUps, writeUpTitle]),
         );
       }
-      setIsFavorited(!isFavorited);
     }
   };
 
-  return { isFavorited, updateFavoriteState };
+  return { favoriteStatusLocalStorage, updateFavoriteState };
 };

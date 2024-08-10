@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { RJPINK } from "@/constants";
 import { usePageContext } from "@/providers";
 import { useFavoriteStatus } from "./hooks";
@@ -11,16 +11,23 @@ interface StarProps {
 
 export const Star = ({ writeUpTitle }: StarProps) => {
   const { isMobile } = usePageContext();
-  const { isFavorited, updateFavoriteState } = useFavoriteStatus(writeUpTitle);
-  const [hover, setHover] = useState(isFavorited);
-  const [selected, setSelected] = useState<boolean>(false);
+  const { favoriteStatusLocalStorage, updateFavoriteState } =
+    useFavoriteStatus();
+  const [hover, setHover] = useState(false);
+  const [selected, setSelected] = useState<boolean>(
+    favoriteStatusLocalStorage?.includes(writeUpTitle) || false,
+  );
 
   const SIZE = isMobile ? 30 : 20;
 
   const handleClick = () => {
-    updateFavoriteState();
+    updateFavoriteState(writeUpTitle);
     setSelected(!selected);
   };
+
+  useEffect(() => {
+    setSelected(favoriteStatusLocalStorage?.includes(writeUpTitle) || false);
+  }, [favoriteStatusLocalStorage]);
 
   return (
     <div
