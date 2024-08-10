@@ -25,7 +25,7 @@ export const Star = ({ writeUpTitle }: StarProps) => {
     updateFavoriteState(writeUpTitle);
     setSelected(!selected);
     trackEvent(
-      selected ? USER_EVENTS.STARRED_WRITEUP : USER_EVENTS.UNSTARRED_WRITEUP,
+      selected ? USER_EVENTS.UNSTARRED_WRITEUP : USER_EVENTS.STARRED_WRITEUP,
       {
         writeupTitle: writeUpTitle,
       },
